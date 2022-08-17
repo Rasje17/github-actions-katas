@@ -35,9 +35,9 @@ jobs:
     container: gradle:6-jdk11
     steps:
       - name: Download code
-      uses: actions/download-artifact@v2
-      with:
-        name: code
-        path: .
+        uses: actions/download-artifact@v2
+        with:
+          name: code
+          path: .
       - name: Test
         run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
